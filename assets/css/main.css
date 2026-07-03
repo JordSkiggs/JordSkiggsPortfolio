@@ -4687,3 +4687,90 @@ input, select, textarea {
 		}
 
 	}
+
+/* =========================================================
+   COMPACT OVERRIDES — append to the end of assets/css/main.css
+   Reduces oversized fonts, spacing, and images so the site
+   fits more content per screen and needs less scrolling.
+   ========================================================= */
+
+/* 1. Smaller base font size on desktop (was 16pt / ~21px) */
+html {
+	font-size: 12pt;
+}
+
+@media screen and (max-width: 1680px) {
+	html {
+		font-size: 11pt;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	html {
+		font-size: 10pt;
+	}
+}
+
+/* 2. Tighter line-height for body copy (was 2.375) */
+body, input, select, textarea {
+	line-height: 1.7;
+}
+
+/* 3. Shrink the intro hero — no longer forces a full screen */
+#intro {
+	min-height: 55vh;
+	padding: 5rem 4rem 3rem 4rem;
+}
+
+	#intro h1 {
+		font-size: 3.5rem;
+	}
+
+/* 4. More compact, multi-column project cards */
+#main > .posts {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+	#main > .posts > * {
+		width: 100%;
+		padding: 2rem;
+	}
+
+	/* reset the border pattern since we're no longer in a strict 2-col flex layout */
+	#main > .posts > article {
+		border-width: 2px !important;
+	}
+
+@media screen and (max-width: 980px) {
+	#main > .posts {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 736px) {
+	#main > .posts {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* 5. Cap image height inside cards so tall source images don't stretch the page */
+#main > .posts .image.fit {
+	margin: 1rem 0;
+}
+
+	#main > .posts .image.fit img {
+		width: 100%;
+		height: 180px;
+		object-fit: cover;
+	}
+
+/* 6. Trim the featured post's oversized padding */
+#main > .post {
+	padding: 4rem 4rem 3rem 4rem;
+}
+
+	#main > .post .image.main img {
+		max-height: 420px;
+		object-fit: cover;
+	}
