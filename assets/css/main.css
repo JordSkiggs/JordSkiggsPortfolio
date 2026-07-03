@@ -4715,17 +4715,6 @@ html {
 body, input, select, textarea {
 	line-height: 1.7;
 }
-
-/* 3. Shrink the intro hero — no longer forces a full screen */
-#intro {
-	min-height: 55vh;
-	padding: 5rem 4rem 3rem 4rem;
-}
-
-	#intro h1 {
-		font-size: 3.5rem;
-	}
-
 /* 4. More compact, multi-column project cards */
 #main > .posts {
 	display: grid;
