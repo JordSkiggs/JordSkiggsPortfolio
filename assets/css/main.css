@@ -4763,3 +4763,48 @@ body, input, select, textarea {
 		max-height: 420px;
 		object-fit: cover;
 	}
+/* =========================================================
+   SECTION HEADERS — append to the end of assets/css/main.css
+   (after the compact-overrides block you already added)
+   Styles the "SQL Projects" / "Python Projects" / "BI & Dashboards"
+   labels and the archive link.
+   ========================================================= */
+
+#main > h3.section-title {
+	margin: 0;
+	padding: 3rem 4rem 0 4rem;
+	border-top: solid 2px #eeeeee;
+	text-align: center;
+	font-size: 1.4rem;
+	color: #909498;
+}
+
+	/* remove the double border/padding where a section title sits
+	   directly above its .posts grid */
+	#main > h3.section-title + .posts {
+		padding-top: 1rem;
+	}
+
+.archive-link {
+	text-align: center;
+	padding: 2rem 4rem 3rem 4rem;
+	border-top: solid 2px #eeeeee;
+	margin: 0;
+}
+
+	.archive-link a {
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-weight: 900;
+		letter-spacing: 0.075em;
+		text-transform: uppercase;
+		font-size: 0.85rem;
+	}
+
+@media screen and (max-width: 736px) {
+	#main > h3.section-title {
+		padding: 2rem 2rem 0 2rem;
+	}
+	.archive-link {
+		padding: 1.5rem 2rem 2rem 2rem;
+	}
+}
